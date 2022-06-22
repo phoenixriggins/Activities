@@ -12,9 +12,12 @@ function informAboutSale(name) {
 }
 
 // function that takes a callback function as an argument
-function getNameAndShowMessage(callback) {
+function getNameAndShowMessage(callTheFunction) {
   const name = prompt("Please Enter Your Name: ");
-  alert(callback(name));
+  return callTheFunction(name);
 }
 
 // pass each "regular" function into getAndShowMessage as a callback function
+console.log(getNameAndShowMessage(greet));
+console.log(getNameAndShowMessage(welcome));
+console.log(getNameAndShowMessage(informAboutSale));
